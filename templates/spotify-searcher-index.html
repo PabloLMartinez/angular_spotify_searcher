@@ -1,0 +1,24 @@
+<view title="'Searcher'">
+
+    <div class="bar bar-subheader item-input-inset">
+        <a class="button icon icon-right ion-chevron-right" ui-sref="Favourites-List">Favourites List</a>
+        <label class="item-input-wrapper">
+            <i class="icon ion-ios7-search placeholder-icon"></i>
+            <input id="searchKey" type="search" placeholder="Search" ng-model="searchKey" autocorrect="off" >
+            <button class="button button-clear" ng-click="clearSearch()">X</button>
+        </label>
+        <button class="button button-clear" ng-click="search()">Search</button>
+    </div>
+
+    <content has-header="true" has-subheader="true">
+        <list>
+            <item ng-repeat="track in tracks" type="item-text-wrap" href="#/search">
+                <div class="row">
+                    <div class="col"><span>{{track.name}}, {{track.artists[0].name}}</span></div>
+                    <div class="col"><button class="button button-small button-balanced" ng-click="addToFavourites(track)">Add to favourites</button></div>
+                </div>
+            </item>
+        </list>
+    </content>
+
+</view>

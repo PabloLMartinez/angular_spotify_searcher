@@ -1,0 +1,14 @@
+<view title="'Favourites List'">
+
+    <content has-header="true" >
+        <list>
+            <item ng-repeat="favouritesTrack in favouritesTracks" type="item-text-wrap" href="#/favourites">
+                <div class="row">
+                    <div class="col"><span>{{favouritesTrack}}</span></div>
+                    <div class="col"><button class="button-small button-clear" ng-click="removeTrack($index)">X</button></div>
+                </div>
+            </item>
+        </list>
+    </content>
+
+</view>

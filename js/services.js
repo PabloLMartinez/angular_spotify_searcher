@@ -3,10 +3,7 @@ angular.module('SpotifySearcher.services', [])
     .factory('SpotifySearcherService', function($http, $q) {
 
         return {
-            /**
-             * Function for searching a track by name
-             * @param {string} searchKey
-             */
+            
             findByTrackName: function(searchKey) {
                 var searchTrack = searchKey.replace(' ', '+');
                 var deferred = $q.defer();
